@@ -1,1 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wünsche & Buchung · SweetButterflyKiss</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg">
+  <div class="overlay">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <h1>Wünsche & Buchung</h1>
+          <p>Individuell, exklusiv, klar geregelt.</p>
+        </div>
+        <div class="pill">💌 Booking</div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px;font-size:22px">Wunschinhalte</h2>
+        <p style="margin:0;color:var(--muted);line-height:1.6">
+          Schreib mir mit deiner Idee, gewünschter Anzahl/Länge und Thema. Ich bestätige dir Preis & Termin.
+        </p>
+
+        <div class="sectionTitle">Optionen</div>
+        <div class="links" style="grid-template-columns:1fr;gap:12px">
+
+          <div class="card" style="background:rgba(255,255,255,.05)">
+            💖 <strong>Wunschbilder</strong><br>
+            <span style="color:var(--muted)">Set nach Wunsch (Outfit/Thema/Posen). Preis nach Aufwand.</span>
+          </div>
+
+          <div class="card" style="background:rgba(255,255,255,.05)">
+            🎬 <strong>Wunschvideos</strong><br>
+            <span style="color:var(--muted)">Individuell & exklusiv (Länge/Story/Extras nach Absprache).</span>
+          </div>
+
+          <div class="card" style="background:rgba(255,255,255,.05)">
+            📹 <strong>Cam-Show (Telegram)</strong><br>
+            <span style="color:var(--muted)">Termin + Dauer + Wunschliste senden, ich bestätige alles.</span>
+          </div>
+
+        </div>
+
+        <div class="btnrow" style="margin-top:16px">
+          <a class="btn primary" href="https://t.me/SweetButterflyKiss" target="_blank" rel="noopener">💬 Über Telegram anfragen</a>
+          <a class="btn" href="links.html">🔗 Zu allen Links</a>
+          <a class="btn" href="index.html">⬅️ Startseite</a>
+        </div>
+
+        <div class="footer" style="margin-top:14px">
+          Hinweis: Keine illegalen Inhalte. Keine Minderjährigen.
+        </div>
+      </div>
+
+      <div class="footer">© <span id="year"></span> SweetButterflyKiss</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
