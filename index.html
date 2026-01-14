@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetButterflyKiss</title>
+  <meta name="description" content="Exklusiver Online-Content, Live-Momente & private Specials." />
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --card:#11111a;
+      --text:#f2f2f5;
+      --muted:#b7b7c2;
+      --border:rgba(255,255,255,.12);
+      --accent:#ff4fd8;
+      --accent2:#8a5cff;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(255,79,216,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(138,92,255,.18), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 16px 60px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+    .brand h1{font-size:22px;margin:0}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+    .pill{padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:13px}
+    .hero{border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .hero h2{margin:0 0 8px;font-size:30px}
+    .hero p{margin:0 0 16px;color:var(--muted)}
+    .btn{display:inline-block;padding:11px 14px;border-radius:14px;border:1px solid var(--border);margin-right:8px}
+    .btn.primary{background:linear-gradient(135deg, rgba(255,79,216,.25), rgba(138,92,255,.2))}
+    .links{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+    .link{padding:12px 14px;border-radius:16px;border:1px solid var(--border);display:flex;justify-content:space-between}
+    footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center}
+    .gate{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center}
+    .gateBox{background:#11111a;padding:22px;border-radius:20px;text-align:center;border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+
+<div class="gate" id="ageGate">
+  <div class="gateBox">
+    <h2>🔞 18+ Bereich</h2>
+    <p>Diese Website ist nur für Erwachsene.</p>
+    <button class="btn primary" onclick="accept()">Ich bin 18+</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <h1>SweetButterflyKiss</h1>
+      <p>Exklusiver Content · Deutschland</p>
+    </div>
+    <div class="pill">Live · Privat · Exklusiv</div>
+  </div>
+
+  <div class="hero">
+    <h2>Willkommen</h2>
+    <p>Hier findest du meine Plattformen, Specials und Kontaktmöglichkeiten.</p>
+    <a class="btn primary" href="#links">Zu den Links</a>
+  </div>
+
+  <div id="links" class="links">
+    <a class="link" href="https://onlyfans.com/" target="_blank"><strong>🔥 OnlyFans</strong><span>↗</span></a>
+    <a class="link" href="https://fansly.com/" target="_blank"><strong>💎 Fansly</strong><span>↗</span></a>
+    <a class="link" href="https://instagram.com/" target="_blank"><strong>📸 Instagram</strong><span>↗</span></a>
+    <a class="link" href="https://t.me/" target="_blank"><strong>💬 Telegram</strong><span>↗</span></a>
+    <a class="link" href="https://x.com/" target="_blank"><strong>🐦 X</strong><span>↗</span></a>
+  </div>
+
+  <footer>
+    © 2026 SweetButterflyKiss
+  </footer>
+</div>
+
+<script>
+  function accept(){
+    localStorage.setItem("ageok","1");
+    document.getElementById("ageGate").style.display="none";
+  }
+  if(localStorage.getItem("ageok")==="1"){
+    document.getElementById("ageGate").style.display="none";
+  }
+</script>
+
+</body>
+</html>
