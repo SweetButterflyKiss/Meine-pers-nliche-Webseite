@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetButterflyKiss</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg">
+  <div class="gate" id="ageGate">
+    <div class="gateBox">
+      <h2>🔞 18+ Bereich</h2>
+      <p>Diese Website ist nur für Erwachsene. Bitte bestätige, dass du mindestens 18 bist.</p>
+      <div class="btnrow" style="justify-content:center">
+        <a class="btn primary" href="#" id="btnYes">Ich bin 18+</a>
+        <a class="btn" href="https://www.google.com/">Nein</a>
+      </div>
+      <div class="footer">Keine Minderjährigen. Punkt.</div>
+    </div>
+  </div>
+
+  <div class="overlay">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <h1>SweetButterflyKiss</h1>
+          <p>Daily Vibes • Teaser • Exklusiver Content</p>
+        </div>
+        <div class="pill">✨ Start • Links • Wünsche</div>
+      </div>
+
+      <div class="card hero">
+        <div>
+          <h2>Willkommen</h2>
+          <p>
+            Schön, dass du da bist. Hier bekommst du einen klaren Überblick über meine Plattformen,
+            exklusive Inhalte und persönliche Wünsche. Respekt rein, Qualität raus.
+          </p>
+
+          <div class="btnrow">
+            <a class="btn primary" href="links.html">➡️ Weiter zu meinen Links</a>
+            <a class="btn" href="booking.html">💌 Wünsche & Buchung</a>
+          </div>
+
+          <div class="sectionTitle">Ein paar Eindrücke</div>
+          <p style="margin-top:0;color:var(--muted)">
+            (Deine Fotos kommen aus <code>images/me1.jpg</code> bis <code>me3.jpg</code>)
+          </p>
+        </div>
+
+        <div class="gallery">
+          <img class="photo" src="images/me1.jpg" alt="Foto 1">
+          <img class="photo" src="images/me2.jpg" alt="Foto 2">
+          <img class="photo" src="images/me3.jpg" alt="Foto 3">
+        </div>
+      </div>
+
+      <div class="footer">© <span id="year"></span> SweetButterflyKiss</div>
+    </div>
+  </div>
+
+  <script>
+    const KEY="sbk_age_ok";
+    const gate=document.getElementById("ageGate");
+    const yes=document.getElementById("btnYes");
+    if(localStorage.getItem(KEY)==="1"){ gate.style.display="none"; }
+    yes.addEventListener("click",(e)=>{
+      e.preventDefault();
+      localStorage.setItem(KEY,"1");
+      gate.style.display="none";
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
